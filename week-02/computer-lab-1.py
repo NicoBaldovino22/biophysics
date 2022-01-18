@@ -1,43 +1,29 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "b7cf91a4",
-   "metadata": {},
-   "source": [
-    "# Computer Lab 1\n",
-    "\n",
-    "Work through the first half of \"First Computer Lab\" (Section 5.1) in _A Student's Guide to Python._  This exercise ties together everything we did in Week 1.\n",
-    "\n",
-    "You can use this notebook to store your code, plots, and notes, or you can write a ___script___ (see Section 3.3) that will carry out the analysis and produce the plots, and simply write your comments in this notebook.  If you write a script, it should save your plot with the data and your best fit to a PDF in this folder when it runs."
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.8.8"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# computer-lab-1.py
+# Python 5.1
+"""
 
+Author:        Nico Baldovino
+Created:       Mon Jan 17 19:58:03 2022
+Modified:      Mon Jan 17 19:58:03 2022
+
+Description
+--------------
+The following code consists of the steps explained in section 5.1 of A Student's Guide to Python
+"""
 import numpy as np
 import matplotlib.pyplot as plt
+print("\n Hello World! \n Welcome to PHY 307 - Biophysics with Jesse Kinder \n My name is Nico Baldovino \n The following are the printed results from section 5.1 in \n A Student's Guide to Python: \n")
 
-a = 3
-print('\n'+str(a))
+time = np.linspace(0,10,101)
+print('time = ', time,'\n')
+
+B = 0 #initial viral load
+A = 20 #initial viral load
+alpha = 5 #rate at which new cells are infected
+beta = 3 #rate at which virions are removed from the blood
+
+viral_load = (A*np.exp(-alpha*time))+(B*np.exp(-beta*time)) #total viral load
+print('viral_load = ', viral_load)
+
+plt.plot(time, viral_load)
+plt.title('Viral Load Count over Time')
