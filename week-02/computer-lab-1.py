@@ -19,16 +19,16 @@ print("\n Hello World! \n Welcome to PHY 307 - Biophysics with Jesse Kinder \n M
 
 time = np.linspace(0,10,101) #creating time matrix consisting of 101 numbers counting from 0 to 10
 
-B = 0 #initial viral load
-A = 10 #initial viral load
-alpha = 10 #rate at which new cells are infected
-beta = 10 #rate at which virions are removed from the blood
+B = 10000 #initial viral load
+A = 10000 #initial viral load
+alpha = 50000 #rate at which new cells are infected
+beta = 10000 #rate at which virions are removed from the blood
 
 #formula for virus concentration in patient
 viral_load = (A*np.exp(-alpha*time))+(B*np.exp(-beta*time)) #total viral load
 
 #plotting eperimental equation
-plt.plot(time, viral_load) #plotting time vs viral load
+plt.plot(time, viral_load, 'b*') #plotting time vs viral load
 
 #%% Fit Experimental Data
 #5.1.2
@@ -44,7 +44,7 @@ concentration = hiv_data[0:N:1, 1] #the second contains the concentration of vir
 
 ## Plotting the retrieved data onto a figure
 #remember that the experimental formulation is also plotted from 5.1.1 from earlier
-plt.plot(time, concentration) #plotting the data arrays
+plt.plot(time, concentration, 'r.') #plotting the data arrays
 plt.rcParams.update({'figure.figsize':(10,8), 'figure.dpi':100}) #resizing the figure
 plt.xlabel('Time (days)') #x-axis label
 plt.ylabel('Viral Load Concentration') #y-axis label
@@ -52,4 +52,5 @@ plt.title('Concentration of Virus in Patients Blood Over Time in Days') #figure 
 
 #%% Assignment
 # Part a
+# assuming beta > alpha, how does the trial solution behave at long times?
 
