@@ -19,10 +19,10 @@ print("\n Hello World! \n Welcome to PHY 307 - Biophysics with Jesse Kinder \n M
 
 time = np.linspace(0,10,101) #creating time matrix consisting of 101 numbers counting from 0 to 10
 
-B = 10000 #initial viral load
-A = 10000 #initial viral load
+B = 1 #initial viral load
+A = 1 #initial viral load
 alpha = 50000 #rate at which new cells are infected
-beta = 10000 #rate at which virions are removed from the blood
+beta = 100000 #rate at which virions are removed from the blood
 
 #formula for virus concentration in patient
 viral_load = (A*np.exp(-alpha*time))+(B*np.exp(-beta*time)) #total viral load
