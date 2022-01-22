@@ -12,10 +12,14 @@ The following code consists of the steps explained in section 5.1 of A Student's
 #%% importing np, plt, & intro
 import numpy as np
 import matplotlib.pyplot as plt
-print("\n Hello World! \n Welcome to PHY 307 - Biophysics with Jesse Kinder \n My name is Nico Baldovino \n The following are the printed results from section 5.1 in \n A Student's Guide to Python: \n")
+print("\n Hello World! \n Welcome to PHY 307 - Biophysics with Jesse Kinder \
+      \n My name is Nico Baldovino  \
+       \n The following are the printed results from section 5.1 in \
+        \n A Student's Guide to Python: ")
 
 #%% First Computer Lab 5.1 HIV Example
 #5.1.1
+# Part a
 
 time = np.linspace(0,10,101) #creating time matrix consisting of 101 numbers counting from 0 to 10
 
@@ -44,13 +48,25 @@ concentration = hiv_data[0:N:1, 1] #the second contains the concentration of vir
 
 ## Plotting the retrieved data onto a figure
 #remember that the experimental formulation is also plotted from 5.1.1 from earlier
+print("\n Examine the plot created in 'Fit Experimental Data'")
 plt.plot(time, concentration, 'r.') #plotting the data arrays
 plt.rcParams.update({'figure.figsize':(10,8), 'figure.dpi':100}) #resizing the figure
 plt.xlabel('Time (days)') #x-axis label
 plt.ylabel('Viral Load Concentration') #y-axis label
-plt.title('Concentration of Virus in Patients Blood Over Time in Days') #figure title
+plt.title('Concentration of HIV Virus in Patients Blood Over Time in Days') #figure title
 
-#%% Assignment
-# Part a
-# assuming beta > alpha, how does the trial solution behave at long times?
+#%% Part C
+
+"The plot created in the previous parts of this code represents the concentration \
+ of the HIV Virus present in the patients blood over a course of 10 days. \
+ The best fit model that would most accurately represent the data points \
+ gathered in the data set HIVseries. This best fit model had a value for \
+ alpha = 0.4 Therefore, with a latency period of HIV at about ten years, the \
+ inverse relationship of the T-cell infection rate (1/alpha) = 1/0.4 = 2.5 days. \
+ comparing this infection rate to the latency period of about ten years, or rather \
+ 3600 days, the body is effectively fighting off these HIV cells for extended periods \
+ of time. This does not indicate that it takes a long time to infect cells, becuse it \
+ actually takes about 2.5 days or so for the cells to be infected. The latency period \
+ can be considered long because the body is effectively fighting off the virus on its \
+ own due to adaptability over extended periods of time."
 
