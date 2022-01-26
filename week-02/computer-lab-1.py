@@ -54,6 +54,7 @@ plt.rcParams.update({'figure.figsize':(10,8), 'figure.dpi':100}) #resizing the f
 plt.xlabel('Time (days)') #x-axis label
 plt.ylabel('Viral Load Concentration') #y-axis label
 plt.title('Concentration of HIV Virus in Patients Blood Over Time in Days') #figure title
+plt.savefig('computer-lab-1-nico-baldovino.pdf')
 
 #%% Part C
 
