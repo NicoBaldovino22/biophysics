@@ -42,3 +42,15 @@ Work through the rest of this week's problems in their associated Jupyter notebo
 - problem-5.17.ipynb
 - problem-5.24.ipynb
 
+
+Week 6
+------
+
+Work through Computer Lab 3 (Chapter 9) in _A Student's Guide to Python_.  You can store your work in the Jupyter notebook, or write a script to complete the assignment.  If you write a script, save it in the `week-06/` folder.
+
+Work through the rest of this week's problems in their associated Jupyter notebooks:
+
+- computer-lab-3.ipynb
+- problem-7.3.ipynb
+- problem-7.8.ipynb
+- problem-7.11.ipynb
