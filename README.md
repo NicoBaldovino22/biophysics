@@ -54,3 +54,17 @@ Work through the rest of this week's problems in their associated Jupyter notebo
 - problem-7.3.ipynb
 - problem-7.8.ipynb
 - problem-7.11.ipynb
+
+
+Week 7
+------
+
+Work through this week's problems in their associated Jupyter notebooks, or
+write a separate script to solve each problem.
+
+- problem-10.3.ipynb
+- problem-10.5.ipynb
+- problem-10.8.ipynb
+- problem-10.9.ipynb
+- problem-10.2.ipynb
+- problem-10.12.ipynb
