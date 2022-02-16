@@ -1,4 +1,4 @@
-# computer-lab-3-nico-baldovino.py
+# computer-lab-3-9.1-2.py
 # Python 5.1
 """
 Author:        Nico Baldovino
@@ -59,7 +59,7 @@ values added together in this filter, which takes the mean value of the neighbor
 for the resulting filtered image to convolve to. \n")
 # Part B
 response = convolve(image, small_filter, mode='valid')
-plt.figure('response', figsize=(8,8))
+plt.figure('response')
 plt.imshow(response)
 plt.axis('off')
 plt.title('Small Square Filter (3x3)')
@@ -144,7 +144,7 @@ plt.savefig("Comparison of Gaussian & Small Square Filter on a Single Dot.jpg")
 #ax = Axes3D(plt.figure('Surface Plot'))
 #ax.plot_surface(X, Y, Z, impulse, rcount=100, ccount=200)
 
-#%% [working] Section 9.2 - Denoising an Image
+#%% Section 9.2 - Denoising an Image
 
 #plt.close('all')
 
@@ -153,10 +153,11 @@ plt.savefig("Comparison of Gaussian & Small Square Filter on a Single Dot.jpg")
 from numpy.random import default_rng
 rng = default_rng()
 rand = rng.random
-
+#print(image)
 noise = np.ones( (1,1) ) * rand()
+#print(noise)
 noisy = convolve(image, noise, mode='valid')
-
+#print(noisy)
 plt.figure('Noisy Image', figsize=(8,8))
 plt.imshow(noisy)
 plt.title('Noisy Image')
@@ -223,13 +224,3 @@ plt.savefig('Comparison of the Effects of each Filter on the Noisy Image.jpg')
 print("9.2b: \n" + "Each of the three filters do NOT improve the Noisy Image, they actually make it more blury \
 as well as zoom in on the center of the image more and more. The only filter that seems to work the best is the \
 small square filter because it takes a smaller average to base the convolved image filter off of.")
-
-# Therefore, we need to figure out why it is not making a noisy image, and why the filters are making it more and more noisy
-
-#%% [working] Section 9.3 - Emphasizing Features
-
-
-
-#%% [working] Section 9.4 (T2) - Image Files and Arrays
-
-
