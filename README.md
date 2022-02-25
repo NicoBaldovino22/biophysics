@@ -68,3 +68,15 @@ write a separate script to solve each problem.
 - problem-10.9.ipynb
 - problem-10.2.ipynb
 - problem-10.12.ipynb
+
+
+Week 8
+------
+
+Work through this week's problems in their associated Jupyter notebooks, or
+write a separate script to solve each problem.
+
+- problem-11.2.ipynb
+- problem-11.5.ipynb
+- problem-11.6.ipynb
+- problem-11.8.ipynb
